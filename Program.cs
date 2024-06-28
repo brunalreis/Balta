@@ -2,6 +2,7 @@
 
 // LEMBRAR SE ENTRAR NA PASTA MEUAPP ATRAVÉS DO COMANDO NO TERMINAL cd .\MeuApp\ ANTES DE DAR dotnet run
 using System;
+using System.Data.Common;
 
 namespace MeuApp
 {
@@ -69,6 +70,22 @@ namespace MeuApp
       return nome + " " + sobrenome + ", tem " + idade.ToString() + " anos";
     }
   }
+
+struct Product{
+  public Product(int id, string name, double price){
+  Id = id;
+  Name = name;
+  Price = price;
+  }
+  public int Id;
+  public string Name;
+  public double Price;
+
+  public double PrinceInDolar(double dolar){
+    return Price * dolar;
+  }
 }
+}
+
 
 
